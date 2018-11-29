@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .msg-text{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+	<div class='container'>
+		<table class="table ">
+			<tr>
+                <strong>제목<?=?></strong>
+                <br><br>
+                작성자 이름<?=?> /날짜<?=?>
+            </tr>
+			<tr>
+                <td>
+                    <div>내용</div>
+				   <input type='button' onclick="location.href=''" value='수정'>
+				</td>
+			</tr>
+            <tr>
+                <td>
+                    댓글<br>
+                    <textarea type="text" name="content" wrap="virtual" rows='5' class="msg-text"><?=$data['content']?></textarea>
+                    <br>
+                    <input type='button' value='등록'>
+                    
+                    <ul>
+                        <li></li>
+                    </ul>
+                </td>
+            </tr>
+		</table>
+	</div>
+
+	<div class='container'>
+		
+	</div>
+</body>
+</html>
