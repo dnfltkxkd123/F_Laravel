@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        
+    </head>
+<body>
+    
+    <div id="app" v-bind:title="title">
+        {{message}}
+    </div>
+
+    <div id="app-3">
+        <p v-if="seen">볼수 있음</p>
+    </div>
+    
+    <ol id="app-4">
+        <li v-for="todo in todos">
+            {{todo.text}}
+        </li>
+    </ol>
+    
+    <div id="app-5">
+        <p>{{message}}</p>
+        <button v-on:click="reverseMessage">메세지 뒤집기</button>
+    </div>
+    
+    <div id="app-6">
+        <p>{{message}}</p>
+        <input v-model="message">
+    </div>
+    
+    <div id="app7">
+        <my-tag></my-tag>
+    </div>
+    
+    <div id="app9">
+        <p>원본메세지:"{{message}}"</p>
+        <p>원본메세지:"{{reversedMessage}}"</p>
+    </div>
+    
+    <div id="app8">
+        <p>Using mustaches: {{ rawHtml }}</p>
+        <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+    </div>
+    
+    <div id="app10" 
+         v-bind:class ="{active : isActive,'text-danger':hasError}">
+        클래스 바인딩
+    </div>
+    <!-- vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        
+        Vue.config.devtools = true;
+        /*스크립트 작성*/
+        
+        var app = new Vue({
+            el:'#app',
+            data:{
+                title:'이것은 타이틀입니다.',
+                message:'안녕하세요 Vue!'
+            }
+        });
+        app.message = 'hello';
+/*
+        var app-3 = new Vue({
+            el:'#app-3',
+            data:{
+                seen:false
+            }
+        });
+        app-3.seen = true;
+        */
+        
+         var app4 = new Vue({
+            el:'#app-4',
+            data:{
+                todos:[
+                    {text:'1'},
+                    {text:'2'},
+                    {text:'3'},
+                    {text:'4'},
+                    {text:'5'}
+                ]
+            }
+        });
+        
+        var app5 = new Vue({
+            el:'#app-5',
+            data:{
+                message:'안녕하십니까?'
+            },
+            methods:{
+                reverseMessage:function(){
+                    this.message = this.message.split('').reverse().join('');
+                }
+            }
+        });
+        
+        
+         var app6 = new Vue({
+            el:'#app-6',
+            data:{
+                message:'안녕하십니까?'
+            },
+            methods:{
+                reverseMessage:function(){
+                    this.message = this.message.split('').reverse().join('');
+                }
+            }
+        });
+        
+        Vue.component(
+            'my-tag',{template:'<div><p>나늬</p><p>나늬2</p></div>'}
+        );
+        var app7 = new Vue({
+            el:'#app7'
+        });
+        
+        var app8 = new Vue({
+            el:'#app8',
+            data:{
+                isButtonDisabled:true
+            }
+        });
+        
+        var app9 = new Vue({
+            el:'#app9',
+            data:{
+                message:'Hello',
+                reversedMessage:'erw'
+            }
+        });
+
+        
+        var app10 = new Vue({
+            el:'#app10',
+            data:{
+                active:true,
+                text-danger:true
+            }
+        });
+    </script>
+</body>
+</html>

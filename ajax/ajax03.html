@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js2.js"></script>
+        <script>
+            function test(){
+                //$.GetAjax({url:"data01.html"});
+                $.GetAjax("data01.html","#div");
+                $.GetAjax("data01.html","#div2");
+            }
+            
+        </script>
+    </head>
+<body>
+    <button onclick="test()">클릭</button>
+    <div id="#div"></div>
+     <div id="#div2"></div>
+</body>
+</html>

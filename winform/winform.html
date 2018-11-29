@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <title>APP</title>
+  <link rel="stylesheet" type="text/css" href="winform.css" >
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="winform.js"></script>
+    <script>
+        //alert($);
+        $(function(){
+            var winform = new WinForm('#winform');
+            //winform.mainMenuBar.enable(true);
+            var fileMenuItem = new MenuItem({
+                text:'파일',
+                onclick:function(){/*alert(this.text)*/
+                    var editMenuItem = new MenuItem({text:'편집'});
+                    winform.mainMenuBar.addMainMenu(editMenuItem);
+                    }
+            });
+            winform.mainMenuBar.addMainMenu(fileMenuItem);
+            /*
+            winform.backgroundColor('#c7c7c7');
+            var mainMenuBar = new MainMenuBar();
+            winform.setMainMenuBar(mainMenuBar);
+            */
+            //winform.backgroundColor('#c7c7c7');
+        })//$()를 설정해서 실행시키지 않으면 적용 안됨
+    </script>
+</head>
+<body>
+    <div id="winform">1</div>
+</body>
+</html>

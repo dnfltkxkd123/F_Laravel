@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        body{
+            background-color:#fdc8fe;
+            font-family: 'Noto Sans',sans-serif;
+        }
+        ul{
+            list-style:none;
+            padding:0;
+            margin:0;
+        }
+
+        img{
+            vertical-align: top;
+        }
+        a{
+            text-decoration:none;
+        }
+        .login-wrapp{
+            background-color:#fdeafd;
+            width:600px;
+            margin:50px auto;
+            border-bottom:1px solid #fdeafd;
+            box-shadow: 0px 11px 31px rgba(0,0,0,0.2);
+        }
+        
+        .login-top{
+            background-color:#e32fe5;
+            padding:60px 0 120px;
+            text-align:center;
+        }
+        
+        .login-box{
+            background-color:#fdeafd;
+            margin:-40px 40px 40px;
+            border-radius:20px;
+            padding:20px 40px 40px;
+            box-shadow: 0px 3px 20px rgba(0,0,0,0.2);
+        }
+        
+        .login-title{
+            font-size:30px;
+            color:#c92bcc;
+            text-align:center;
+            font-weight:480;
+        }
+        
+        .login-form{
+            margin-top:30px;
+        }
+        
+        .login-form li:first-child{
+            margin-bottom:25px;
+        }
+        
+        .login-guide{
+            font-size:12px;
+            color:#d4c4d4;
+            font-weight:480;
+        }
+        
+        .login-form input{
+            display:block;
+            width:100%;
+            border-bottom: 1px solid #e5d1e5;
+            background-color:#fdeafd;
+            padding:22px 2px 4px;
+            color:#764d76;
+            font-size:14px;
+        }
+        
+        .login-submit{
+            background-color:#e32fe5;
+            width:300px;
+            display:block;
+            margin:30px auto;
+            height:70px;
+            line-height:70px;
+            border-radius:80px;
+            color:#fdeafd;
+            font-size:16px;
+            font-weight:700;
+        }
+        
+        .login-submit:hover{
+            background-color:#bf3ac1;
+        }
+        
+        .login-submit:active {
+            background-color:#4c124d;
+        }
+        
+        a.login-guide{
+            display:inline-block;
+            width:100%;
+            text-align:center;
+        }
+    </style>   
+</head>
+<body>
+    <form>
+        <div class="login-wrapp">
+        <div class="login-top">
+            <a href="#" class="logo"><img src="images/logo/png"></a>
+        </div>
+        <div class="login-box">
+                <h1 class="login-title">LOGIN</h1>
+                <ul class="login-form">
+                  <li>
+                        <strong class="login-guide">EMAIL</strong>
+                        <input type="text">
+                  </li>
+                   <li>
+                        <strong class="login-guide">PASSWORD</strong>
+                        <input type="password">
+                 </li>
+                    <button type="submit" class="login-submit">LOGIN</button>
+                <a href="#" class="login-guide">FORGET PASSWORD</a>
+               </ul>
+         </div>
+        </div>
+    </form>
+    
+</body>
+</html>

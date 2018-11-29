@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="180711-3.php" method="host">
+		<fieldset>
+			<legend>회원가입 폼</legend>
+			이름:<input type="text" name="name"><br>
+			학번:<input type="text" name="num"><br>
+			전화번호:<input type="text" name="phone"><br>
+			관심언어: PHP<input type="checkbox" value="PHP" name="lang[]">
+			         JSP<input type="checkbox" value="JSP" name="lang[]">
+			         ASP.NET<input type="checkbox" value="ASP.NET" name="lang[]"><br>
+			취미:<select name="hobby[]" multiple>
+				       <option>영화</option>
+					   <option>운동</option>
+					   <option>독서</option>
+					   <option>기타</option>	
+			    </select><br>
+			<input type="submit" value="전송">
+        </fieldset>
+	</form>
+</body>
+</html>

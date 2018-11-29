@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(function(){
+            
+            /*
+            var h1 = $(".h1");
+            alert(h1.length);//or h1.size;
+            alert(h1.attr("title"));
+            alert(h1.eq(1).attr("title"));
+            alert(h1.get(1).title);
+            h1.css();
+            */
+            /*
+            h1.attr("title","Title!!!!!!!!!!!");
+            h1.each(function(index,dom){
+                if(index == 2){
+                    return false;
+                }
+                $(dom).html("타이틀"+index);//or $(this)
+                //dom.innerHTML = "타이틀"+index;
+
+            });
+          });
+          */
+            //alert($('div').text());
+            
+            /*
+            var h1 = $("h1");
+            $('h1')
+                .css('color','red')
+            .css("font-size","10px")
+            .css("margin","100px 10px 20px 30px")
+            .css({"background":"yellow","font-weight":"bold"});
+            alert($('h1').css('color'));
+            alert($('h1').css('margin-left'));
+            */
+            
+            /*
+            $("div")
+            .css("font-size",function(i,v)){
+                 $this.css("font-size",(parseInt(v)*(i+1)) + px);
+                 })
+            */
+            
+            /*
+            $("h1").click(function(){
+                $("div").toggleClass("font_red");
+            });
+            */
+            
+            /*
+            $("#loginbox").html("<div>아이디</div>");//싹바꾸기
+            $("#loginbox").append("<div>아이디</div>");//추가
+            */
+            
+            
+            var divId = $("<div>");
+            var divTitledId = $("<span>아이디</span>");
+            var divInputId = $("<input>",{
+                                          id:"user_id",
+                                          name:"user_id"
+                                         
+            });
+            divId.append(divTitledId).append(divInputId);
+            $("#loginbox").append(divId);
+            
+            
+            
+            /*
+            var str = $("#loginbox").prepend("<div>");//앞에 붙이기
+            var str = $("#loginbox").before("<div>");//태그 앞에 붙이기
+            var str = $("#loginbox").after("<div>");//태그 뒤에 붙이기
+            $("#loginbox").appendTo('<div>');
+            $("<div>").insertBefore("#loginbox");
+            */
+            
+            
+            /*
+            $("#loginbox").before($('#box').clone);
+            */
+            
+            /*
+            var login =  $('#login');
+            var img = $('<img src="d"> <br>');
+            var id = $("<input type='text' placeholder='로그인'>");
+            var pwd = $("<input type='password' placeholder='비밀번호'> <br>");
+            var loginButton = $("<input type='submit' value='로그인'> <br>");
+            login.css("text-align","center").css("width","400px").css("margin","0 auto");
+            img.css("src","''");
+            id.css("width","300px").css("height","50px").css("margin","20px 0px 10px");
+            pwd.css("width","300px").css("height","50px").css("margin","10px 0px 10px");
+            loginButton.css("width","300px").css("height","50px").css("margin-bottom","10px");
+            login.append(img).append(id).append(pwd).append(loginButton);
+            */
+            
+        });
+    </script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1 class="h1" title="t1">제목</h1>
+    <h1 class="h1" title="t2">제목</h1>
+    <h1 class="h1" title="t3">제목</h1>
+    <h1 class="h1" title="t4">제목</h1>
+    <div>
+        <span>div1</span>
+    </div>
+    <div id="loginbox">
+        <span>div1</span>
+    </div>
+    <div>
+        <span>div1</span>
+    </div>
+    <div id='login'>
+    </div>
+</body>
+</html>

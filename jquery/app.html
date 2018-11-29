@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>APP</title>
+  <link rel="stylesheet" type="text/css" href="style.css?1" >
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="app.js"></script>
+  <script>
+  $(function(){
+	  var submenuFile = [
+		  {name:'새파일', click:function(){alert('새파일');}},
+		  {name:'열기'}
+	  ];
+	  var menuFile = {
+		  name:'파일', 
+		  submenu:submenuFile
+	  };
+	  var menu = [
+	  menuFile,
+	  {name:'편집', shortcut:'E',
+	  submenu :[ {name:'실행취소',click:function(){alert("실행취소");}}]
+	   },
+	  {name:'보기'},
+	  {name:'검색', shortcut:'S'}
+	  ];
+
+	  var app = new App('#app',{toolbar:true});
+	  app.setMainMenu(menu);
+  });
+  </script>
+ </head>
+ <body>
+  <div id="app">
+<!--
+	  <ul class="app_main_menu_bar">
+	  	<li class="app_main_menu_item">파일
+			<ul class="app_sub_menu_list">
+				<li class="app_sub_menu_item">새파일</li>
+				<li class="app_sub_menu_item">열기</li>
+			</ul>
+		</li>
+	  	<li class="app_main_menu_item">편집
+			<ul class="app_sub_menu_list">
+				<li class="app_sub_menu_item">실행취소</li>
+				<li class="app_sub_menu_item">다시실행</li>
+			</ul>
+		</li>
+	  </ul>
+-->
+  </div>
+ </body>
+</html>

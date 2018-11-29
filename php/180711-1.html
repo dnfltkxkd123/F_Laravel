@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="180711-1.php" method="host">
+		<table>
+			<tr>
+				<th>
+					관심언어
+				</th>
+				<th>
+					PHP<input type="checkbox" value="PHP" name="lang[]">
+					JSP<input type="checkbox" value="JSP" name="lang[]">
+					ASP.NET<input type="checkbox" value="ASP.NET" name="lang[]">
+				</th>
+			</tr>
+			<tr>
+				<td>취미</td>
+				<td>
+				   <select name="hobby[]" multiple>
+					   <option>영화</option>
+					   <option>운동</option>
+					   <option>독서</option>
+					   <option>기타</option>	
+				   </select>
+				</td>
+				
+			</tr>
+		</table>
+		<input type="submit" value="전송">
+	</form>
+</body>
+</html>
